@@ -9,6 +9,9 @@ export default {
     port: process.env.PORT,
     bcrypt_salt_rounds: process.env.BCRYPT_SALT_ROUNDS,
     stripe_secret_key: process.env.stripe_secret_key,
+    super_admin_name: process.env.SUPER_ADMIN_NAME,
+    super_admin_password: process.env.SUPER_ADMIN_PASSWORD,
+    super_admin_email: process.env.SUPER_ADMIN_EMAIL,
     jwt: {
         jwt_access_token_secret: process.env.JWT_ACCESS_TOKEN_SECRET,
         jwt_refresh_token_secret: process.env.JWT_REFRESH_TOKEN_SECRET,

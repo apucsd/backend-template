@@ -20,9 +20,9 @@ router
         UserController.createAdmin,
     );
 //create a new super admin
-router
-    .route('/create-super-admin')
-    .post(validateRequest(UserValidation.createUserZodSchema), UserController.createSuperAdmin);
+// router
+//     .route('/create-super-admin')
+//     .post(validateRequest(UserValidation.createUserZodSchema), UserController.createSuperAdmin);
 // //update user status
 router
     .route('/update-status/:id')

@@ -27,17 +27,17 @@ const createAdmin = catchAsync(async (req: Request, res: Response, next: NextFun
         data: result,
     });
 });
-const createSuperAdmin = catchAsync(async (req: Request, res: Response, next: NextFunction) => {
-    const { ...userData } = req.body;
-    const result = await UserService.createSuperAdminToDB(userData);
+// const createSuperAdmin = catchAsync(async (req: Request, res: Response, next: NextFunction) => {
+//     const { ...userData } = req.body;
+//     const result = await UserService.createSuperAdminToDB(userData);
 
-    sendResponse(res, {
-        success: true,
-        statusCode: StatusCodes.OK,
-        message: 'Super Admin created successfully',
-        data: result,
-    });
-});
+//     sendResponse(res, {
+//         success: true,
+//         statusCode: StatusCodes.OK,
+//         message: 'Super Admin created successfully',
+//         data: result,
+//     });
+// });
 
 const getUserProfile = catchAsync(async (req: Request, res: Response) => {
     const user = req.user;
@@ -140,7 +140,7 @@ export const UserController = {
     getUserById,
     deleteAccount,
     createAdmin,
-    createSuperAdmin,
+    // createSuperAdmin,
     getAllAdmin,
     updateStatus,
 };
