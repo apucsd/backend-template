@@ -25,9 +25,14 @@ app.use('/api/v1', router);
 
 //live response
 app.get('/', (req: Request, res: Response) => {
-  res.send(
-    '<h1 style="text-align:center; color:#A55FEF; font-family:Verdana;">Hey, How can I assist you today!</h1>'
-  );
+      res.send(`
+            <div style="display:flex; justify-content:center; align-items:center; height:100vh;">
+                  <div style="text-align:center;">
+                        <h1 style="color:#A55FEF; font-family:Arial, Helvetica, sans-serif; font-size:3rem;">Welcome to my API</h1>
+                        <p style="color:#777; font-size:1.5rem;">I'm happy to help you with anything you need.</p>
+                  </div>
+            </div>
+      `);
 });
 
 //global error handle
@@ -35,16 +40,16 @@ app.use(globalErrorHandler);
 
 //handle not found route;
 app.use((req, res) => {
-  res.status(StatusCodes.NOT_FOUND).json({
-    success: false,
-    message: 'Not found',
-    errorMessages: [
-      {
-        path: req.originalUrl,
-        message: "API DOESN'T EXIST",
-      },
-    ],
-  });
+      res.status(StatusCodes.NOT_FOUND).json({
+            success: false,
+            message: 'Not found',
+            errorMessages: [
+                  {
+                        path: req.originalUrl,
+                        message: `The API route ${req.originalUrl} doesn't exist. Please contact the API owner if you need help`,
+                  },
+            ],
+      });
 });
 
 export default app;

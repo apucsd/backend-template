@@ -3,10 +3,10 @@ import { USER_ROLES } from '../../enums/user';
 import { User } from '../modules/user/user.model';
 
 const superAdmin = {
-    name: config.super_admin_name,
+    name: 'Super Admin',
     role: USER_ROLES.SUPER_ADMIN,
-    email: config.super_admin_email,
-    password: config.super_admin_password,
+    email: 'superadmin@gmailcom',
+    password: 'superadmin',
     profile: 'https://i.ibb.co/z5YHLV9/profile.png',
     status: 'active',
     verified: true,
