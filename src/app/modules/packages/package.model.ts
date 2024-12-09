@@ -18,6 +18,11 @@ const packageSchema = new Schema<IPackage>({
       status: {
             type: String,
             required: true,
+            default: 'active',
+      },
+      credit: {
+            type: Number,
+            required: true,
       },
       stripePriceId: {
             type: String,
