@@ -4,7 +4,7 @@ import { User } from '../modules/user/user.model';
 const superAdmin = {
       name: 'Super Admin',
       role: USER_ROLES.SUPER_ADMIN,
-      email: 'superadmin@gmailcom',
+      email: 'superadmin@gmail.com',
       password: 'superadmin',
       profile: 'https://i.ibb.co/z5YHLV9/profile.png',
       status: 'active',
