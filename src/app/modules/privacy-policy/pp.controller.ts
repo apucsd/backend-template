@@ -2,7 +2,6 @@ import { Request, Response } from 'express';
 import catchAsync from '../../../shared/catchAsync';
 import sendResponse from '../../../shared/sendResponse';
 import { StatusCodes } from 'http-status-codes';
-import { PrivacyPolicy } from './pp.model';
 import { PrivacyPolicyService } from './pp.service';
 
 const createPrivacyPolicy = catchAsync(async (req: Request, res: Response) => {

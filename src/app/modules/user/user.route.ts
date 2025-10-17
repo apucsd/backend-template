@@ -42,7 +42,7 @@ router
     );
 
 // get all users
-router.route('/all-user').get(auth(USER_ROLES.SUPER_ADMIN, USER_ROLES.ADMIN), UserController.getAllUsers);
+router.route('/all-user').get(UserController.getAllUsers);
 // get all admins
 router.route('/all-admin').get(auth(USER_ROLES.SUPER_ADMIN), UserController.getAllAdmin);
 
